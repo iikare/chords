@@ -1,0 +1,55 @@
+% file abc.tex
+% !TEX options=--shell-escape
+\documentclass{scrartcl}
+\usepackage{abc}
+\usepackage{subcaption}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\title{\fontfamily{cmr}\selectfont{Sample Chord Progressions}}
+\author{pkishi}
+\date{\today}
+\maketitle
+
+\section{\fontfamily{cmr}\selectfont{Introduction}}
+  This is a reference for several chord progressions that I found interesting.
+\section{\fontfamily{cmr}\selectfont{Examples}}
+
+\begin{figure}[h!]
+      \begin{abc}[name=secA, width=.75\textwidth]
+X: 1
+M: C
+L: 1/2
+K: Eb
+ [K: bass]F,, B,, | E,, A,, | D,, G,, | C,,2 ||
+      \end{abc}
+      \centering
+      \caption{a}
+\end{figure}
+
+\begin{figure}[h!]
+      \begin{abc}[name=secB, width=.75\textwidth]
+X: 1
+M: C
+L: 1/2
+K: Eb
+        [K: bass] A,,2 | B,, =B,, | C,2 | E, D, ||
+      \end{abc}
+      \centering
+      \caption{b}
+\end{figure}
+
+\begin{figure}[h!]
+      \begin{abc}[name=secC, width=.75\textwidth]
+X: 1
+M: C
+L: 1/1
+K: Eb
+        [K: bass][F,,F,] | [B,,A,] | [E,,E,] | [C,,C,] ||
+      \end{abc}
+      \centering
+      \caption{c}
+\end{figure}
+
+\end{document}
