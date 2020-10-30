@@ -1,8 +1,10 @@
 GENFILES = secA secB secC secD
 
-all: chords
+NAME = $(basename $(wildcard *.tex))
 
-chords:
-	pdflatex --shell-escape chords.tex
-	rm -f chords.aux chords.log texput.log chords.out chords.nav chords.snm chords.toc
+all: $(NAME)
+
+$(NAME):
+	pdflatex --shell-escape $(NAME).tex
+	rm -f $(NAME).aux $(NAME).log texput.log $(NAME).out $(NAME).nav $(NAME).snm $(NAME).toc
 	rm -f $(addsuffix .*, $(GENFILES))
